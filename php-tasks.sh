@@ -5,8 +5,8 @@ set -e
 
 analyse () {
     echo - - - - -
-    echo STATIC ANALYSIS
-    echo - - - - -
+    echo Analysing code...
+    sleep 2
     vendor/bin/phpstan analyse .
 }
 
@@ -28,22 +28,25 @@ env () {
 
 metrics () {
     echo - - - - -
-    echo METRICS REPORT
-    echo - - - - -
+    echo Generating metrics report...
+    sleep 2
     phpmetrics --report-html="./metrics-report" ./
+    echo Report generated.
+    echo - - - - -
 }
 
 sniff () {
     echo - - - - -
-    echo CODE SNIFFER
-    echo - - - - -
+    printf "Checking style... "
+    sleep 2
     phpcs -s
+    printf "Passed!\n"
 }
 
 test () {
     echo - - - - -
-    echo UNIT TESTS AND COVERAGE REPORT
-    echo - - - - -
+    echo Running tests...
+    sleep 2
     phpunit --bootstrap vendor/autoload.php src/ --whitelist src --coverage-html coverage-report --coverage-text=coverage-report.txt
 }
 
