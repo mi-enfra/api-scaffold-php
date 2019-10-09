@@ -6,6 +6,6 @@
  * Marker interface for output class
  * @author Marvin Isaac <misaac@pushnami.com>
  */
-interface OutputInterface
+interface ResponseInterface
 {
 }

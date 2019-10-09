@@ -6,7 +6,7 @@
  * Base class for accepting HTTP requests to the app
  * @author Marvin Isaac <misaac@pushnami.com>
  */
-abstract class HttpInput
+abstract class HttpRequest
 {
     /**
      * Instance of app container

@@ -2,13 +2,13 @@
     // @codeCoverageIgnoreStart
     namespace App\Shared\Base;
     
-    use App\Shared\Interfaces\OutputInterface;
+    use App\Shared\Interfaces\ResponseInterface;
 
 /**
  * Base class for sending HTTP responses from the app
  * @author Marvin Isaac <misaac@pushnami.com>
  */
-abstract class HttpOutput implements OutputInterface
+abstract class HttpResponse implements ResponseInterface
 {
     /**
      * Instance of Slim\Http\Response
