@@ -7,7 +7,7 @@ env () {
     cd "private/"
     if ! [ -f ".env" ]; then
         cp "env.example" ".env"
-        # Replaces [= "something in here"] to [= ""]
+        # Set ENVIRONMENT = "LOCAL"
         sed -i -e "s/\(ENVIRONMENT = \"\"\)/ENVIRONMENT = \"LOCAL\"/g" ".env"
         sleep 2
         printf "Done!\n"
@@ -22,6 +22,8 @@ hook () {
     fi
     ln -s `pwd`/hooks/pre-commit `pwd`/.git/hooks/pre-commit
 }
+
+#Main
 
 echo Dependencies installed.
 printf "Creating pre-commit git hook... "

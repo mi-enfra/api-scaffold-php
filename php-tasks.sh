@@ -31,7 +31,6 @@ metrics () {
     echo Generating metrics report...
     sleep 2
     phpmetrics --report-html="./metrics-report" ./
-    echo Report generated.
     echo - - - - -
 }
 
