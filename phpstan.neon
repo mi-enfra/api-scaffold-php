@@ -1,0 +1,8 @@
+includes:
+	- %rootDir%/conf/config.levelmax.neon
+
+parameters:
+    autoload_directories:
+        - %rootDir%/../../autoload.php
+    excludes_analyse:
+        - %currentWorkingDirectory%/vendor
