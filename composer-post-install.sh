@@ -16,10 +16,16 @@ env () {
     fi
 }
 
+hook () {
+    if [ -f `pwd`/.git/hooks/pre-commit ]; then
+        rm `pwd`/.git/hooks/pre-commit
+    fi
+    ln -s `pwd`/hooks/pre-commit `pwd`/.git/hooks/pre-commit
+}
+
 echo Dependencies installed.
 printf "Creating pre-commit git hook... "
-rm `pwd`/.git/hooks/pre-commit || return 0
-ln -s `pwd`/hooks/pre-commit `pwd`/.git/hooks/pre-commit
+hook
 sleep 2
 printf "Done!\n"
 printf "Creating development .env file... "
