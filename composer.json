@@ -23,6 +23,9 @@
         }
     },
     "scripts": {
+        "check": [
+            "bash ./php-tasks.sh check"
+        ],
         "pre-install-cmd": [
             "bash ./composer-pre-install.sh"
         ],

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Routines
 
@@ -82,10 +83,10 @@ then
     run $task
 else
     case $1 in
-        test)
-            test
+        check)
             sniff
             analyse
+            test
             ;;
         commit)
             all

@@ -2,7 +2,7 @@
     // @codeCoverageIgnoreStart
     namespace App\DefaultForbidden;
 
-    use App\Shared\Base\HTTPInput as BaseClass;
+    use App\Shared\Base\HttpInput as BaseClass;
 
 /**
  * Class to handle routes/requests that are not allowed or not yet implemented
