@@ -3,6 +3,7 @@
     namespace App;
 
     use App\DefaultForbidden\DefaultForbidden;
+    use App\Project\Http\Request as Project;
 
 /**
  * Add all dependencies required by the app
@@ -21,8 +22,20 @@ final class DependencyInjector
     {
         $container = $app->getContainer();
 
+        $capsule = new \Illuminate\Database\Capsule\Manager;
+        $capsule->addConnection($container->get('settings')['sqlite'], 'sqlite');
+        $capsule->setAsGlobal();
+        $capsule->bootEloquent();
+        $container['database'] = function ($container) use ($capsule) {
+            return $capsule;
+        };
+
         $container['DefaultForbidden'] = function ($container) {
             return new DefaultForbidden($container);
+        };
+
+        $container['Project'] = function ($container) {
+            return new Project($container);
         };
         
         return $app;

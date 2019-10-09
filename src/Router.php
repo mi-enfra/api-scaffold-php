@@ -16,6 +16,8 @@ final class Router
      */
     public function set(\Slim\App $app) : \Slim\App
     {
+        $app->get('/project', 'Project');
+
         $app->any('/[{path:.*}]', 'DefaultForbidden');
         
         return $app;
