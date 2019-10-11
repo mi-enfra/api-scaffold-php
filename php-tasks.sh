@@ -89,6 +89,8 @@ else
             sniff
             analyse
             test
+            echo - - - - -
+            echo "All checks passed!"
             ;;
         commit)
             all
