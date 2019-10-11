@@ -6,3 +6,4 @@ parameters:
         - %rootDir%/../../autoload.php
     excludes_analyse:
         - %currentWorkingDirectory%/vendor
+        - %currentWorkingDirectory%/database

@@ -2,6 +2,7 @@
 <ruleset name="PHP Format Standard" namespace="App\FormatStandard">
     <file>./</file>
     <exclude-pattern>vendor/*$</exclude-pattern>
+    <exclude-pattern>database/*$</exclude-pattern>
     <exclude-pattern>*.(css|js)$</exclude-pattern>
 
     <rule ref="PSR2">
