@@ -31,16 +31,16 @@
             }
         },
         "check": [
-            "bash ./php-tasks.sh check"
+            "bash ./scripts/php-tasks.sh check"
         ],
         "migrate": [
             "bash ./vendor/bin/phinx migrate"
         ],
         "pre-install-cmd": [
-            "bash ./composer-pre-install.sh"
+            "bash ./scripts/composer-pre-install.sh"
         ],
         "post-install-cmd": [
-            "bash ./composer-post-install.sh"
+            "bash ./scripts/composer-post-install.sh"
         ]
     }
 }
